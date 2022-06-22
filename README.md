@@ -3,6 +3,19 @@
 # 가상환경을 3.8로 왜했는가?
 AWS에 올릴껀데 3.8이 잘 돌아가기 때문에 한것이다
 
+# mySQL 접속위한 유저 만들기
+> use mysql;
+>
+> - # mySQL 접속위한 유저 만들기
+> create user 'memo_user'@'%' identified by 'memo1234';
+>					# '%' => 네트워크 통해서 접속가능하게 하겠다
+> 
+> grant all on memo_db.* to 'memo_user'@'%';
+> - # grant all on
+> - # 모든 권한을 주겠다
+> - # 모든권한을 준다 momo_db의 *(모든것)에 to 'memo_user' 에다가
+
+
 # 순서
 1. db에서 새로운 db 만들고
 커리문으로 유저생성하고
